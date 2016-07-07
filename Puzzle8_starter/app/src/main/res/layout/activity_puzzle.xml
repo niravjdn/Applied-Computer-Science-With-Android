@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".PuzzleActivity"
+    android:id="@+id/puzzle_container">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/take_photo_button_label"
+        android:id="@+id/btn_photo"
+        android:onClick="dispatchTakePictureIntent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shuffle_button_label"
+        android:id="@+id/btn_shuffle"
+        android:onClick="shuffleImage"
+        android:layout_alignTop="@+id/btn_photo"
+        android:layout_toRightOf="@+id/btn_photo"
+        android:layout_toEndOf="@+id/btn_photo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/solve_button_label"
+        android:id="@+id/btn_solve"
+        android:onClick="solve"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btn_shuffle"
+        android:layout_toEndOf="@+id/btn_shuffle" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btn_solve"
+        android:layout_alignEnd="@+id/btn_solve"
+        android:layout_marginTop="117dp" />
+
+</RelativeLayout>
